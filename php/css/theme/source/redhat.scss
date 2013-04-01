@@ -1,0 +1,176 @@
+/**
+ * Red Hat theme for reveal.js.
+ * 
+ * Copyright (C) 2011-2012 Matt Hicks
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Oswald|Bangers|Press+Start+2P|Raleway+Dots|Vollkorn|Abril+Fatface);
+
+@font-face {
+  font-family: 'OverpassBold';
+  src: url("../fonts/overpass-bold-wf.eot");
+  src: url("../fonts/overpass-bold-wf.eot?#iefix") format("eot"), url("../fonts/overpass-bold-wf.woff") format("woff"), url("../fonts/overpass-bold-wf.ttf") format("truetype"), url("../fonts/overpass-bold-wf.svg#webfontzRhIMntw") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url("../fonts/overpass-wf.eot");
+  src: url("../fonts/overpass-wf.eot?#iefix") format("eot"), url("../fonts/overpass-wf.woff") format("woff"), url("../fonts/overpass-wf.ttf") format("truetype"), url("../fonts/overpass-wf.svg#webfontiqWxLEM5") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Overpass', sans-serif;
+$mainColor: #333;
+$headingFont: 'Overpass', sans-serif;
+$headingColor: black;
+$headingLetterSpacing: -0.05em;
+$headingTextShadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+$headingTextTransform: none;
+$backgroundColor: #f7fbfc;
+$linkColor: #3b759e;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(227,227,227,1), rgba(255,255,255,1) );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+	letter-spacing: -0.05em;
+}
+
+.footer {
+  color: black;
+  font-family: 'Overpass';
+}
+
+.reveal h1 {
+  font-size: 5em;
+}
+
+.reveal h2 {
+  font-size: 3em;
+}
+
+.reveal h3 {
+  font-size: 2em;
+}
+
+.reveal h4 {
+  font-size: 1.5em;
+}
+
+.intro h2 {
+  margin: 0 0 40px 0;
+}
+
+/* Default image styling - set minimum height */
+.reveal section img {
+  border: none;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* An image without the box shadow */
+.reveal img.noshadow {
+  box-shadow: none;
+}
+
+h1.invert,
+h2.invert,
+h3.invert,
+h4.invert {
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+h1.middle {
+  margin-top: 200px;
+}
+h2.middle {
+  margin-top: 225px;
+}
+h3.middle {
+  margin-top: 250px;
+}
+h4.middle {
+  margin-top: 275px;
+}
+
+h1.middle2 {
+  margin-top: 150px;
+}
+h2.middle2 {
+  margin-top: 175px;
+}
+h3.middle2 {
+  margin-top: 200px;
+}
+h4.middle2 {
+  margin-top: 225px;
+}
+
+.reveal .typing {
+  font-family: 'Courier';
+  font-weight: bold;
+}
+
+.reveal .computer {
+  font-family: 'Press Start 2P';
+}
+
+.reveal .comic {
+  font-family: 'Bangers';
+  letter-spacing: 0em;
+}
+
+.reveal .spoken {
+  font-family: 'Oswald';
+}
+
+.reveal .quote {
+  font-family: 'Vollkorn';
+}
+
+.reveal .date {
+  font-family: 'Abril Fatface';
+}
+
+.reveal .dotted {
+  font-family: 'Raleway Dots';
+  letter-spacing: 0.1em;
+  word-spacing: 0.3em;
+}
+
+.reveal li:first-child {
+  margin-top: 20px;
+}
+
+.reveal li {
+  margin-bottom: 10px;
+}
+
+/* hide vertical scrollbar */
+html {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}

@@ -1,0 +1,452 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+<style type="text/css">
+
+div.color { color:white; }
+
+</style>
+    <meta charset="utf-8">
+
+    <title>OpenStack Summit Spring 2013 - Brian Stevens</title>
+
+    <meta name="description" content="OpenStack @Red Hat">
+    <meta name="author" content="Brian Stevens">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/redhat.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+        <style>
+          .intro .reveal h3 {
+            font-size: 2.8em;
+            margin-top: 100px;
+          }
+
+          .intro .reveal h4 {
+            margin-bottom: 50px;
+          }
+
+          .intro .reveal h5 {
+            margin-bottom: 10px;
+          }
+
+          .intro .reveal .state-background {
+            background:url(pics/shadowman.png);
+            background-repeat:no-repeat;
+            background-position:center center;
+            -moz-animation: pulse 8s ease;
+            -webkit-animation: pulse 8s ease;
+            -moz-animation-iteration-count: infinite; 
+            -webkit-animation-iteration-count: infinite; 
+            opacity: 0.0;
+          }
+
+          @-moz-keyframes pulse {
+             0% {opacity: 0.0;}
+             50% {opacity: 0.3;}
+             100% {opacity: 0.0;}
+          }
+
+          @-webkit-keyframes pulse {
+             0% {opacity: 0.0;}
+             50% {opacity: 0.3;}
+             100% {opacity: 0.0;}
+          }
+        </style>
+
+        <section data-state="intro">
+          <h3>OpenStack @Red Hat</h3>
+          <h4>OpenStack Summit Portland 2013</h4>
+          <h5>Brian Stevens, <a href="http://twitter.com/addvin">@addvin</a></h5>
+          <h5>CTO, VP Worldwide Engineering, Red Hat</h5>
+        </section>
+
+        <section>
+          <p>Flow: (will be deleted)</p>
+          <p>lookback over our involvement</p>
+          <p>our dev model</p>
+          <p>rdo</p>
+          <p>rhos early adopters</p>
+          <p>openshift/openstack demo video</p>
+          <p>grizzly shoutouts</p>
+        </section>
+
+        <section fullscreen-img="pics/shadowman.jpg" fullscreen-size="contain">
+          <h3 class="invert middle">20 Years of Disruption</h3>
+        </section>
+
+        <section>
+          <h1 class="date middle">2013</h1>
+        </section>
+
+        <section>
+          <h2 class="middle2"><b>BEFORE</b> we talk about <b>TODAY</b>. . .</h2>
+        </section>
+
+        <section>
+          <h1 class="date middle">2012</h1>
+        </section>
+
+        <section>
+          <h1 class="date middle">2011</h1>
+        </section>
+
+        <section>
+          <h1 class="date middle">2010</h1>
+        </section>
+
+        <section>
+          <h3 class="date">2010</h3><br/>
+          <p class="quote fragment">JC calls me with their idea:</p></br/>
+          <p class="quote fragment">
+            <i>"To produce the ubiquitous Open Source
+            cloud computing platform that will meet the
+            needs of public and private cloud providers
+            regardless of size, by being simple to
+            implement and massively scalable."</i>
+          </p>
+        </section>
+
+        <section>
+          <h3 class="date">2011</h3><br/>
+          <p class="quote fragment">June? Red Hat assigns our first developer to start working in the OpenStack community</p>
+        </section>
+
+        <section>
+          <img width="200" height="200" src="pics/mark-mcloughlin-openstack.jpg" alt="mm">
+          <p class="fragment">date and code snip of mark's first patch?</p>
+          <p class="fragment">overlay his contrib level</p>
+        </section>
+
+        <section>
+          <h3 class="date">2011</h3><br/>
+          <p class="quote">Red Hat assigns our first developer to start working in the OpenStack community</p>
+          <p class="quote fragment">internal cloud proposal on 8/25/11 ...</p>
+        </section>
+
+        <section>
+          <p style="quote font-size:30px">Support for OpenStack -- <del style='color:red'><span style='color:black'>Red Hat Confidential</span></del> – Stevens 8/25/11</p>
+            <br>
+            <p style="quote font-size:30px">
+        <i>"In the last 12 months, the openstack project has executed a great bootstrapping effort where it has quickly become a globally recognized brand and a vibrant, rapidly growing user and development community. In recognition, we need to make some changes across our product strategy, technical architecture, community activity and marketing/comms. These changes can best be summarized as embracing openstack within our development activity, product plans, and partnerships."</i>
+            </br>
+          </p>
+        </section>
+
+        <section>
+          <h3>People were enthusiastic</h3>
+	  <br>
+          <p class="fragment"><i>"I'm incredibly relieved and excited to see this."</i></p>
+          <p class="fragment"><i>"This is really really good."</i></p>
+          <p class="fragment"><i>"First thought. Wow. Let's do this."</i></p>
+        </section>
+
+        <section>
+          <h3 class="date">2011</h3>
+	  <br>
+          <p>Red Hat assigns our first developer to start working in the OpenStack community</p>
+          <p>internal cloud proposal on 8/25/11 ...</p>
+          <p class="fragment">Diablo release</p>
+          <p class="fragment">Rackspace begins discussing spinning up the foundation</p>
+        </section>
+
+        <section>
+          <h3 class="date">2012</h3>
+	  <br>
+          <p class="fragment">Essex release</p>
+          <p class="fragment">Birth of the OpenStack Foundation</p>
+          <p class="fragment">Red Hat joins at the Platinum level</p>
+          <p class="fragment">Folsom release</p>
+          <p class="fragment">We were identified as second largest contributor to Folsom</p>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="date">2013</h3>
+	  <br>
+          <p class="fragment">Grizzly release</p>
+          <p class="fragment">Red Hat makes and even bigger impact to Grizzly</p>
+        </section>
+
+        <section>
+          <h1 class="middle dotted">PAUSE</h1>
+        </section>
+
+        <section>
+          <h3>Lets talk about the Red Hat model</h3>
+	  <br>
+          <p class="fragment">Many variations vendors take on open source:</p>
+          <p class="fragment">Some enable optimizations for their hardware</p>
+          <p class="fragment">Some use open-core to upsell proprietary add-ons</p>
+          <p class="fragment">Some invest in focused areas</p>
+          <p class="fragment">Some contribute little and soley ship and support</p>
+          <p class="fragment">And some go ALL IN</p>
+        </section>
+
+        <section data-state="lifecycle">
+          <img class="background" src="pics/rht-lifecycle.png" alt="Red Hat Lifecycle Diagram"/>
+          <h3>Red Hat Lifecycle</h3>
+        </section>
+
+        <section>
+          <h3>Shadowman Update</h3>
+          <p class="fragment highlight-red">Reached $1.1B in FY12</p>
+          <img width="400" height="326" src="pics/rht-10-years.png" alt="10 years">
+        </section>
+
+        <section>
+          <h3>Is Open Source a Business Model?</h3>
+	  <br>
+          <p class="fragment">No</p>
+          <p class="fragment">But it is the best <em>DEVELOPMENT</em> model on the planet</p>
+          <p class="fragment">Enables collaboration</p>
+          <p class="fragment"><em>Modular innovation which customers can consume incrementally</em></p>
+        </section>
+
+          <section data-state="middle">
+            <h3 class="middle">Open Source is Defining the Future of IT Architecture</h3>
+          </section>
+
+          <section>
+            <p>Linux</p>
+            <p>OpenStack</p>
+            <p>Hadoop</p>
+            <p>Rails</p>
+            <p>MongoDB</p>
+            <p>Git</p>
+            <p>Cassandra</p>
+          </section>
+
+          <section>
+            <h3>What do each of these have in common?</h3>
+	    <br>
+            <ol>
+            <li><p class="fragment">They are all examples of next gen IT solutions</p></li>
+            <li><p class="fragment">They are all open source</p></li>
+            <li><p class="fragment"><em>They were started by end users and developers, <b>not</b> product companies</em></p></li>
+            </ol>
+          </section>
+
+        <section>
+          <h3>The cloud without OSS?</h3>
+	  <br>
+          <ul>
+            <li>No Amazon
+            <li>No Rackspace
+            <li>No Google
+            <li>No Yahoo!
+            <li>No Salesforce
+            <li>No LinkedIn
+            <li>No Pandora
+            <li>No Twitter
+            <li>No Facebook
+          </ul>
+        </section>
+
+        <section>
+          <h3>Introducing RDO</h3>
+	  <br>
+          <p class="fragment">A community distribution of verbatem upstream openstack</p>
+          <p class="fragment">Get the latest upstream bits instantly on your server</p>
+          <p class="fragment">Packaged for easy installation on RHEL and -EL rebuilds</p>
+        </section>
+
+        <section>
+          <h3>Upstream milestones</h3>
+          <img width="800" height="600" src="pics/rht-openstack-lifecycle-upstream-only.jpg" alt="wires">
+        </section>
+
+        <section>
+          <h3>Upstream milestones + RDO</h3>
+          <img width="800" height="600" src="pics/rht-openstack-lifecycle-RDO-only.jpg" alt="wires">
+        </section>
+
+        <section>
+          <h3>To get RDO, go here:</h3>
+	  <br>
+          <p class="fragment"><a href="https://openstack.redhat.com">openstack.redhat.com</a></p>
+        </section>
+
+        <section>
+          <h2 class="middle">What about customers?</h2>
+        </section>
+
+        <section>
+          <p>Last year we announced we would put OpenStack in a subscription model</p>
+          <p class="fragment"><img width="700" height="40" src="pics/sub-elements-1.png" alt="wires"></p>
+          <p class="fragment"><img width="700" height="40" src="pics/sub-elements-2.png" alt="wires"></p>
+          <p class="fragment"><img width="700" height="40" src="pics/sub-elements-3.png" alt="wires"></p>
+          <p class="fragment"><img width="700" height="40" src="pics/sub-elements-4.png" alt="wires"></p>
+          <p class="fragment"><img width="700" height="40" src="pics/sub-elements-5.png" alt="wires"></p>
+          <p class="fragment"><img width="700" height="40" src="pics/sub-elements-6.png" alt="wires"></p>
+        </section>
+
+        <section>
+          <h3>RHOS - Red Hat OpenStack</h3>
+          <p class="fragment">the initial release was based on Folsom</p>
+          <p class="fragment">we made previews available as a free download</p>
+          <p class="fragment">and we collaborated with customers under our lighthouse program</p>
+          <p class="fragment">that program handled up to 25 handheld customers</p>
+        </section>
+
+        <section>
+          <h3>Upstream milestones + RDO</h3>
+          <img width="800" height="600" src="pics/rht-openstack-lifecycle-RDO-only.jpg" alt="wires">
+        </section>
+
+        <section>
+          <h3>Upstream milestones + RDO + RHOS</h3>
+          <img width="800" height="600" src="pics/rht-openstack-lifecycle.jpg" alt="wires">
+        </section>
+
+        <section>
+          <h3>RHOS now enters Early Adopter phase</h3>
+          <p class="fragment">which means standard Red Hat support</p>
+          <p class="fragment">and will be available for up to 200 qualified customers</p>
+        </section>
+
+        <section>
+          <h3 class="middle2">It is the ECOSYSTEM dummy</h3>
+	  <p>be nice to have a background pic which shows a core modules with spider webs from it</p>
+        </section>
+
+        <section>
+          <p class="fragment">We know.</p>
+          <p class="fragment">So we are building a certified partner program</p>
+          <p class="fragment">a slide on what that looks like and who is in it</p>
+        </section>
+
+        <section>
+          <h3>About a year before we got involved in OpenStack ...</h3>
+	  <br>
+          <p class="fragment">we set out to make developer's lives easier</p>
+          <p class="fragment">Developers should be writing code</p>
+          <p class="fragment">Without worrying about deployment and infrastructure</p>
+          <p class="fragment">and IT needs an architecture of continuous deployment</p>
+        </section>
+
+        <section>
+            <h3>To help them both we started openshift</h3>
+            <img width="250" height="250" src="pics/openshift.png">
+        </section>
+
+          <section>
+            <p>Develop in Java, Ruby, P*, Node.js</p>
+            <p class="fragment">Use GIT, Eclipse, or a Web IDE</p>
+            <p class="fragment">Cartridge stacks from Linux</p>
+            <p class="fragment">Security from SELINUX</p>
+            <p class="fragment">QoS from CGROUPS</p>
+            <p class="fragment">Containers from LXC</p>
+          </section>
+
+          <section>
+            <p class="fragment grow">250,000+ Active Applications</p>
+            <a href="http://openshift.com">OpenShift</a>
+          </section>
+
+          <section>
+            <h3 class="middle">Running on OpenStack</h3>
+            <p>OpenShift can elastically flex as the application demand dictates</p>
+          </section>
+
+          <section>
+            <p>Video of Demo</p>
+          </section>
+
+        <section>
+            <h3>Red Hat Cloud Architecture</h3>
+            <img width="728" height="338" src="pics/sw-stack.png">
+        </section>
+
+        <section>
+          <h3>[Closing out] A closer look at the vibrancy of Grizzly</h3>
+	  <br>
+          <p class="fragment">stats on # devs</p>
+          <p class="fragment"># of new projects</p>
+          <p class="fragment">rates: frequency of submission and patch reviews?</p>
+          <p class="fragment">rates: frequency of jenkins runs?</p>
+          <p class="fragment">monty showed me some online page that shows activity</p>
+        </section>
+
+        <section>
+          <h3>Grizzly</h3>
+	  <br>
+          <p class="fragment">depict how participation is getting much more balanced</p>
+        </section>
+
+        <section>
+          <h3>Grizzly shoutouts for some standout contributors</h3>
+	  <br>
+          <p class="fragment">slide each for 5 ppl: picture, light bio/likes, what they contrib'd - doesn't need to be code</p>
+        </section>
+
+        <section>
+          <h3>Thank you</h3>
+	  <br>
+          <p>This <a href="http://openstacksummit2013-addvin.rhcloud.com">presentation</a>
+          running on <a href="http://openshift.com">OpenShift</a></p>
+          <p>Developed in HTML5 with <a href="https://github.com/hakimel/reveal.js">reveal.js</a></p>
+          <p>Brian Stevens, <a href="http://twitter.com/addvin">@addvin</a></p>
+          <img width="200" height="200" src="pics/redhat.png" alt="Red Hat">
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'lib/js/fullscreen-img.js' },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+
+    <div class="footer" class="share-reveal" style="position: absolute; bottom: 10px; left: 50%; margin-left: -200px; z-index: 20;">
+      <p>BRIAN STEVENS - OPENSTACK SUMMIT PORTLAND 2013</p>
+    </div>
+  </body>
+</html>
+
