@@ -129,6 +129,23 @@ h4.middle2 {
   margin-top: 225px;
 }
 
+h1.middle2 {
+  margin-top: 100px;
+}
+h2.middle2 {
+  margin-top: 125px;
+}
+h3.middle2 {
+  margin-top: 150px;
+}
+h4.middle2 {
+  margin-top: 175px;
+}
+
+.reveal .displayed {
+  opacity: 0.3;
+}
+
 .reveal .typing {
   font-family: 'Courier';
   font-weight: bold;
@@ -151,6 +168,10 @@ h4.middle2 {
   font-family: 'Vollkorn';
 }
 
+.reveal p.quote {
+  font-style: italic;
+}
+
 .reveal .date {
   font-family: 'Abril Fatface';
 }
@@ -167,6 +188,12 @@ h4.middle2 {
 
 .reveal li {
   margin-bottom: 10px;
+  list-style: none;
+}
+
+.reveal ul.center {
+  text-align: center;
+  margin: 0px;
 }
 
 /* hide vertical scrollbar */
